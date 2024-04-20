@@ -37,6 +37,7 @@ public class GameEngine extends JFrame {
     }
 
     private void initiate() {
+        
     }
 
     public void startMainLoop() {

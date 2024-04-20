@@ -23,11 +23,12 @@ public class CustomCanvas extends Canvas {
         addKeyListener(new KeyAdapter() {
             @Override
             public void keyPressed(KeyEvent e) {
-                
+
             }
+
             @Override
             public void keyReleased(KeyEvent e) {
-                
+
             }
         });
          addMouseListener(new MouseAdapter() {
