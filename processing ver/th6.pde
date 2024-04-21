@@ -141,16 +141,10 @@ public class EntityManager <T extends EntityInterface>{
     idToObj.put(currentId,obj);
     obj.setId(currentId);
     currentId++;
-    if(currentId < 0 ) { // I forgot how overflow works
-      currentId = 0;
-    }
   }
   ArrayList getObjPool(){
     return objPool;
   }
- 
-  
-  
   
 }
 /*

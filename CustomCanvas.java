@@ -54,7 +54,7 @@ public class CustomCanvas extends Canvas {
     public void draw() {
         final BufferStrategy buffer = getBufferStrategy();
         if (buffer == null) {
-            createBufferStrategy(2);
+        createBufferStrategy(2);
             return;
         }
         

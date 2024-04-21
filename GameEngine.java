@@ -37,7 +37,7 @@ public class GameEngine extends JFrame {
     }
 
     private void initiate() {
-        
+
     }
 
     public void startMainLoop() {
@@ -96,6 +96,7 @@ public class GameEngine extends JFrame {
 
     private void update() {
                 // Lógica del juego, captura de entradas, calculo de movimientos, ataques, etc.
+                
     }
 
     private void draw() {
