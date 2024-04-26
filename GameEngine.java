@@ -9,7 +9,7 @@ public class GameEngine extends JFrame {
 
     public static CustomCanvas cc;
 
-    private static int UPS_TARGET = 60;
+    private static int UPS_TARGET = 24;
     private static int FPS_TARGET = 60;
     private static int fps = 0;
     private static int ups = 0; //updatespersecond
@@ -60,8 +60,8 @@ public class GameEngine extends JFrame {
             final long beginLoop = System.nanoTime();
             
             currentTime = beginLoop - lastUpdate;
-            deltaTime = currentTime * 60e-3f;
-            System.out.print(deltaTime);
+            //deltaTime = currentTime * .00001 ;
+            //System.out.println(deltaTime);
             lastUpdate = beginLoop;
             
 

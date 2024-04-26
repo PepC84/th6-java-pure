@@ -20,6 +20,7 @@ public class CustomCanvas extends Canvas {
         this.height = height;
         setIgnoreRepaint(true);
         setPreferredSize(new Dimension(this.width, this.height));
+        
         addKeyListener(new KeyAdapter() {
             @Override
             public void keyPressed(KeyEvent e) {

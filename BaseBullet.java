@@ -1,4 +1,4 @@
-class BaseBullet implements EntityInterface{
+class Bullet implements EntityInterface{
     int id,type,diameter;
     short x,y;
     int hitboxX,hitboxY;
@@ -8,7 +8,7 @@ class BaseBullet implements EntityInterface{
     boolean autoDelete = false;
     boolean destroyed = false;
     int radius = diameter >> 1;
-      BaseBullet(int idd,int typee,short xx, short yy,float anglee, float velocityy,int diameterr) {
+      Bullet(int idd,int typee,short xx, short yy,float anglee, float velocityy,int diameterr) {
         id=idd;
         type =typee;
         x = xx;
@@ -25,8 +25,13 @@ class BaseBullet implements EntityInterface{
         }
         return true;
     }
+    
     public void display() {
         
+    }
+    public void moveBasicLinearBullet() {
+      x += velocityf * Math.cos(Math.toRadians(anglef)) ;
+      y += velocityf * Math.sin(Math.toRadians(anglef)) ;
     }
     public void setId(int id) {
         this.id = id;
@@ -72,12 +77,9 @@ class BaseBullet implements EntityInterface{
       velocity += acceleration  * deltaTimeAdjusted * 0.5f;
     }
     */
-    /*
-    void moveBasicLinearBullet() {
-          x += velocity * cos(radians(angle)) *  deltaTimeAdjusted;
-        y += velocity * sin(radians(angle)) *  deltaTimeAdjusted;
-    }
-    */
+    
+
+    
     private boolean visibleCheck() {
         if(y >  Main.CLIPMAXY  + diameter||y < Main.CLIPMINY  - diameter ||x > Main.CLIPMAXX  + diameter || x <  Main.CLIPMINX  - diameter) {
        destroyed= true;
