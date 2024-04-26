@@ -14,6 +14,8 @@ public class GameEngine extends JFrame {
     private static int fps = 0;
     private static int ups = 0; //updatespersecond
 
+    protected static double deltaTime;
+
 
 
     public GameEngine(final String title, final int width, final int height) {
@@ -48,18 +50,20 @@ public class GameEngine extends JFrame {
         final double TIME_PER_UPDATE = NS_PER_SECOND / UPS_TARGET;
         final double TIME_PER_RENDER = NS_PER_SECOND / FPS_TARGET;
 
-        long lastUpdate = System.nanoTime();
+        long lastUpdate  = System.nanoTime();
         long lastCounter = System.nanoTime();
-
         double currentTime;
         double deltaAps = 0;
         double deltaFps = 0;
 
         while (running) {
             final long beginLoop = System.nanoTime();
-
+            
             currentTime = beginLoop - lastUpdate;
+            deltaTime = currentTime * 60e-3f;
+            System.out.print(deltaTime);
             lastUpdate = beginLoop;
+            
 
             deltaAps += currentTime / TIME_PER_UPDATE;
 
@@ -95,14 +99,13 @@ public class GameEngine extends JFrame {
     }
 
     private void update() {
-                // Lógica del juego, captura de entradas, calculo de movimientos, ataques, etc.
-                
+        // Lógica del juego, captura de entradas, calculo de movimientos, ataques, etc.
+        
     }
 
     private void draw() {
         cc.draw();
     }
-
     public static int getFPS() {
         return fps;
     }

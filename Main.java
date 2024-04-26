@@ -1,27 +1,23 @@
 public class Main {
-final int programW = 1280;
-final int programH = 720;
-final int CLIPMINX = 40;
-final int CLIPMAXX = 1240;
-final int CLIPMINY = 40;
-final int CLIPMAXY = 680;
-final int CENTERX = 630;
-final int CENTERY = 350;
-  int playerInitialPosX = CENTERX;
-  int playerInitialPosY = CENTERY - CENTERY/5;
-  int playerdiameter= 5;
-  int playerSpeed = 5;
-  int bossInitialPosX = CENTERX/2;
-  int bossInitialPosY = CENTERY/5;
-  int bossDiameter = 5;
-final float INV_SQRT_TWO = 0.70710678118f;
-final float SIXTY_E_NEG3 = 60e-3f ; //0.06  idk why i did this
-final float TEN_E_3_OVER_SIXTY = 1000/60f; //16.66666 
-  float deltaTime;
-  float deltaTimeAdjusted;
-  long  lastTime = System.currentTimeMillis();
+    //reminder to move these variables
+    public final static int programW = 1280;
+    public final static int programH = 720;
+    public final static int CLIPMINX = 40;
+    public final static int CLIPMAXX = 1240;
+    public final static int CLIPMINY = 40;
+    public final static int CLIPMAXY = 680;
+    public final static int CENTERX = 630;
+    public final static int CENTERY = 350;
+    public static   int playerInitialPosX = CENTERX;
+    public static   int playerInitialPosY = CENTERY - CENTERY/5;
+    public static   int playerdiameter= 5;
+    public static   int playerSpeed = 5;
+    public static   int bossInitialPosX = CENTERX/2;
+    public static   int bossInitialPosY = CENTERY/5;
+    public static   int bossDiameter = 5;
+    public static final float INV_SQRT_TWO = 0.70710678118f;
     public static void main(String[] args) throws Exception {
-        GameEngine game = new GameEngine("silly goose game", 1280, 720);
+        GameEngine game = new GameEngine("silly goose game", programW,programH);
         game.startGame();
         game.startMainLoop();
     }
