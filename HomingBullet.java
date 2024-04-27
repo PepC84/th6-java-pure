@@ -6,7 +6,6 @@ public class HomingBullet extends Bullet {
   }
   public void display() {
 
-
   }
   public boolean process() {
     return true;

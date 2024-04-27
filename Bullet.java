@@ -27,7 +27,7 @@ class Bullet implements EntityInterface{
     }
     
     public void display() {
-        
+       
     }
     public void moveBasicLinearBullet() {
       x += velocityf * Math.cos(Math.toRadians(anglef)) ;
